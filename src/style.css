@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f5f7fa;
+  font-family: sans-serif;
+}
+
+/* --- Swiper共通のベーススタイル --- */
+.swiper {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* 1つ目のスライダーの背景色 */
+.swiper-first .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #4a90e2;
+  color: white;
+}
+
+/* スライド番号表示エリアの見た目 */
+#slide-counter {
+  max-width: 600px;
+  margin: 10px auto 30px auto;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+/* --- 2つ目のスライダー（画像とタイトルのデザイン） --- */
+.swiper-second {
+  margin-bottom: 40px;
+}
+
+.swiper-second .swiper-slide {
+  position: relative; /* タイトルを画像の下部に重ねるための基準点 */
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-second img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像の縦横比を保ったまま綺麗にフィットさせる */
+}
+
+/* 画像の上に被せるタイトル */
+.slide-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* --- フォーム全体のスタイル --- */
+#basic_form {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+#basic_form label {
+  font-weight: bold;
+  width: 150px;
+  padding-top: 12px;
+}
+
+.input-container {
+  flex: 1;
+}
+
+#basic_form input {
+  padding: 10px 12px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#basic_form input.is-invalid {
+  border-color: #e04444;
+  background-color: #fff8f8;
+}
+
+#basic_form button {
+  display: block;
+  border: 0;
+  color: #fff;
+  padding: 12px;
+  width: 200px;
+  margin: 30px auto 0 auto;
+  background-color: #0144ff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#basic_form button:hover {
+  background-color: #0033cc;
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+  #basic_form label {
+    width: 100%;
+    margin-bottom: 5px;
+    padding-top: 0;
+  }
+}
