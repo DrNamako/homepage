@@ -1,0 +1,362 @@
+/* body {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f5f7fa;
+  font-family: sans-serif;
+}
+
+/* --- Swiper共通のベーススタイル --- */
+.swiper {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* 1つ目のスライダーの背景色 */
+.swiper-first .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #4a90e2;
+  color: white;
+}
+
+/* スライド番号表示エリアの見た目 */
+#slide-counter {
+  max-width: 600px;
+  margin: 10px auto 30px auto;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+/* --- 2つ目のスライダー（画像とタイトルのデザイン） --- */
+.swiper-second {
+  margin-bottom: 40px;
+}
+
+.swiper-second .swiper-slide {
+  position: relative; /* タイトルを画像の下部に重ねるための基準点 */
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-second img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像の縦横比を保ったまま綺麗にフィットさせる */
+}
+
+/* 画像の上に被せるタイトル */
+.slide-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* --- フォーム全体のスタイル --- */
+#basic_form {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+#basic_form label {
+  font-weight: bold;
+  width: 150px;
+  padding-top: 12px;
+}
+
+.input-container {
+  flex: 1;
+}
+
+#basic_form input {
+  padding: 10px 12px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#basic_form input.is-invalid {
+  border-color: #e04444;
+  background-color: #fff8f8;
+}
+
+#basic_form button {
+  display: block;
+  border: 0;
+  color: #fff;
+  padding: 12px;
+  width: 200px;
+  margin: 30px auto 0 auto;
+  background-color: #0144ff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#basic_form button:hover {
+  background-color: #0033cc;
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+  #basic_form label {
+    width: 100%;
+    margin-bottom: 5px;
+    padding-top: 0;
+  }
+} 
+
+/* ===================================================
+   ベースデザイン（優しいアースカラーとフォント）
+   =================================================== */
+   body {
+    margin: 0;
+    padding: 60px 20px;
+    background-color: #fcfaf6; /* 温かみのあるオフホワイト */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+    color: #4a4238; /* 柔らかいチャコール（真っ黒は避けて優しく） */
+    line-height: 1.6;
+  }
+  
+  /* ===================================================
+     ヘッダーと各セクションのレイアウト
+     =================================================== */
+  .site-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+  }
+  
+  .sub-title {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    color: #b58d5c; /* くすみゴールドブラウン */
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .main-title {
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    color: #3e382f;
+    font-weight: 600;
+  }
+  
+  .lead-text {
+    font-size: 15px;
+    color: #706453;
+  }
+  
+  .section-container {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #3e382f;
+  }
+  
+  .section-desc {
+    font-size: 14px;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 30px;
+    color: #706453;
+  }
+  
+  /* ===================================================
+     Swiper共通のカスタマイズ（AIぽさを消す）
+     =================================================== */
+  .swiper {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(62, 56, 47, 0.06); /* 柔らかい影 */
+    overflow: hidden;
+    background: #ffffff;
+  }
+  
+  /* スライダー1（特徴テキスト） */
+  .swiper-first .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 0 40px;
+    text-align: center;
+    background-color: #f5ede1; /* 優しいココアベージュ */
+    color: #4a4238;
+  }
+  
+  /* スライダー2（フォトギャラリー） */
+  .swiper-second img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slide-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent); /* グラデーションにしてプロっぽく */
+    color: #fff;
+    padding: 30px 20px 20px 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  /* スライダーの矢印とドットをベージュに統一 */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #b58d5c !important;
+    scale: 0.8;
+  }
+  .swiper-pagination-bullet-active {
+    background: #b58d5c !important;
+  }
+  
+  /* テキストカウンタ */
+  #slide-counter {
+    margin: 15px auto 0 auto;
+    text-align: center;
+    font-weight: bold;
+    color: #b58d5c;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+  
+  /* ===================================================
+     フォームのカスタマイズ（落ち着いたナチュラルデザイン）
+     =================================================== */
+  #basic_form {
+    background-color: #ffffff;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(62, 56, 47, 0.06);
+  }
+  
+  .form-group {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+  
+  #basic_form label {
+    font-weight: bold;
+    width: 160px;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #5c5243;
+  }
+  
+  .input-container {
+    flex: 1;
+  }
+  
+  #basic_form input {
+    padding: 12px 14px;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e1dbd2; /* 優しいグレーベージュ */
+    background-color: #faf9f6;
+    font-size: 14px;
+    color: #4a4238;
+    transition: all 0.3s ease;
+  }
+  
+  /* 入力欄をクリック（フォーカス）したときの上品な光り方 */
+  #basic_form input:focus {
+    outline: none;
+    border-color: #b58d5c;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(181, 141, 92, 0.2);
+  }
+  
+  /* 入力エラー時のスタイル */
+  #basic_form input.is-invalid {
+    border-color: #d9534f;
+    background-color: #fff9f9;
+  }
+  
+  /* 送信ボタン（落ち着いたアースブラウン） */
+  #basic_form button {
+    display: block;
+    border: 0;
+    color: #fff;
+    padding: 14px;
+    width: 220px;
+    margin: 35px auto 0 auto;
+    background-color: #5c5243;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #basic_form button:hover {
+    background-color: #443c31; /* ホバーで少し深く */
+  }
+  
+  /* ===================================================
+     レスポンシブ対応（スマホ幅での自動調整）
+     =================================================== */
+  @media (max-width: 600px) {
+    body {
+      padding: 40px 15px;
+    }
+    .form-group {
+      flex-direction: column;
+    }
+    #basic_form label {
+      width: 100%;
+      margin-bottom: 8px;
+      padding-top: 0;
+    }
+    #basic_form {
+      padding: 25px 20px;
+    }
+  }
