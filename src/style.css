@@ -27,6 +27,12 @@
   color: white;
 }
 
+.swiper-first img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+}
+
 /* スライド番号表示エリアの見た目 */
 #slide-counter {
   max-width: 600px;
