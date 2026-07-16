@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  // 💡 ここが超重要！「./」になっているか確認してください
   base: './', 
   
   build: {
