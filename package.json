@@ -12,6 +12,8 @@
     "vite": "^8.0.12"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "canvas-confetti": "^1.9.4",
     "just-validate": "^4.3.0",
     "swiper": "^12.2.0"
   }
