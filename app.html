@@ -1,82 +1,191 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>マル</title>
-  </head>
-  <body>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Beloved Cat - 愛猫の紹介サイト</title>
+</head>
+
+<body>
+
+  <!-- 背景 -->
+  <div id="tsparticles"></div>
+
+  <!-- Header -->
+  <header class="site-header" data-aos="fade-down">
+
+    <p class="sub-title">My Companion</p>
+
+    <h1 class="main-title">
+      愛猫のいる暮らし
+    </h1>
+
+    <p class="lead-text">
+      我が家の大切な家族を紹介します。<br>
+      日々の可愛い瞬間をまとめました。
+    </p>
+
+  </header>
+
+
+  <!-- 写真 -->
+  <section class="section-container">
+
+    <h2 class="section-title">
+      愛猫ギャラリー
+    </h2>
+  
     <div class="swiper swiper-first">
+  
       <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+  
+        <div class="swiper-slide" data-cat-name="Nao">
+          <img src="/Nao_1.jpg" alt="Nao">
+          <div class="slide-title">三毛猫なおなお</div>
+        </div>
+  
+        <div class="swiper-slide" data-cat-name="Tyako">
+          <img src="/tyako_2.jpg" alt="Tyako" class="cat-tyako">
+          <div class="slide-title">チャトラのちゃこ</div>
+        </div>
+  
+        <div class="swiper-slide" data-cat-name="Hana">
+          <img src="/Hana_1.jpg" alt="Hana">
+          <div class="slide-title">ぶち猫はなまる</div>
+        </div>
+
+        <div class="swiper-slide" data-cat-name="Sora">
+          <img src="/masyu_1.jpg" alt="masyu">
+          <div class="slide-title">白猫マシュ</div>
+        </div>
+  
       </div>
+  
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
+  
     </div>
-    
-    <div id="slide-counter">スライ</div>
+  
+    <div id="slide-counter">
+      Nao を表示しています
+    </div>
+  
+  </section>
+
+
+  <!-- 特徴 -->
+
+  <section class="section-container">
+
+    <h2 class="section-title">
+      みんなのベストショット
+    </h2>
 
     <div class="swiper swiper-second">
+
       <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/id/10/600/300" alt="森の景色">
-            <div class="slide-title">美しい大自然の森</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/id/29/600/300" alt="山の景色">
-            <div class="slide-title">そびえ立つ雄大な山々</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/id/43/600/300" alt="海の景色">
-            <div class="slide-title">聳え立つビル群
+
+        <div class="swiper-slide">
+          <img src="/nao_2.jpg" alt="Nao">
+          <div class="slide-title">ゆったりなおなお</div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="/chako_2.jpg" alt="chako">
+          <div class="slide-title">ちきまる</div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="/hana_2.jpg" alt="chako">
+          <div class="slide-title">えびみたいなはなちゃん</div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="/masyu_2.jpg" alt="chako">
+          <div class="slide-title">おりぼんましゅ</div>
+        </div>
+
       </div>
+
       <div class="swiper-pagination"></div>
+
       <div class="swiper-button-prev"></div>
+
       <div class="swiper-button-next"></div>
+
     </div>
 
-    <form id="basic_form" novalidate>
+  </section>
+
+
+  <!-- Form -->
+
+  <section class="section-container">
+
+    <h2 class="section-title">
+      猫友コミュニティ
+    </h2>
+
+    <p class="section-desc">
+      メッセージをお待ちしています。
+    </p>
+
+    <form id="basic_form">
+
       <div class="form-group">
-        <label for="basic_name"><span>名前</span></label>
+
+        <label for="basic_name">お名前</label>
+
         <div class="input-container">
-          <input id="basic_name" type="text" name="name" placeholder="名前を入力してください。" />
+          <input id="basic_name" type="text">
         </div>
+
       </div>
 
       <div class="form-group">
-        <label for="basic_email"><span>アドレス</span></label>
+
+        <label for="basic_email">メール</label>
+
         <div class="input-container">
-          <input id="basic_email" type="text" name="email" placeholder="メールアドレスを入力してください。" />
+          <input id="basic_email" type="text">
         </div>
+
+      </div>
+
+     
+
+      <div class="form-group">
+
+        <label for="basic_age">猫歴</label>
+
+        <div class="input-container">
+          <input id="basic_age" type="number">
+        </div>
+
       </div>
 
       <div class="form-group">
-        <label for="basic_password"><span>パスワード</span></label>
+
+        <label for="basic_address">お住まい</label>
+
         <div class="input-container">
-          <input id="basic_password" type="password" name="password" placeholder="パスワードを入力してください。" />
+          <input id="basic_address" type="text">
         </div>
+
       </div>
 
-      <div class="form-group">
-        <label for="basic_age"><span>年齢</span></label>
-        <div class="input-container">
-          <input id="basic_age" type="number" name="age" placeholder="年齢を入力してください。" />
-        </div>
-      </div>
+      <button type="submit">
+        メッセージを送信する
+      </button>
 
-      <div class="form-group">
-        <label for="basic_address"><span>住所</span></label>
-        <div class="input-container">
-          <input id="basic_address" type="text" name="address" placeholder="住所を入力してください。" />
-        </div>
-      </div>
-
-      <button type="submit">送信</button>
     </form>
-    <script type="module" src="/src/app.js"></script>
-  </body>
+
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+
 </html>

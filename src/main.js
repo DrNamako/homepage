@@ -1,105 +1,237 @@
-import './style.css';
-import JustValidate from 'just-validate';
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import "./style.css";
 
-// === 【追加ライブラリ】AOS (スクロールアニメーション) の読み込み ===
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+// =========================
+// ライブラリ
+// =========================
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 
-// ===================================================
-// 1. 1つ目のスライダー（特徴の紹介スライダー）
-// ===================================================
-const swiperFirst = new Swiper('.swiper-first', {
-  direction: 'horizontal',
+import JustValidate from "just-validate";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import { tsParticles } from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
+
+// =========================
+// tsParticles
+// =========================
+async function initParticles() {
+  await loadSlim(tsParticles);
+
+  await tsParticles.load({
+    id: "tsparticles",
+    options: {
+      fullScreen: {
+        enable: true,
+        zIndex: -1,
+      },
+
+      background: {
+        color: "transparent",
+      },
+
+      fpsLimit: 60,
+
+      particles: {
+        number: {
+          value: 25,
+          density: {
+            enable: true,
+            area: 900,
+          },
+        },
+
+        color: {
+          value: "#ffd54f",
+        },
+
+        opacity: {
+          value: 0.2,
+        },
+
+        size: {
+          value: {
+            min: 2,
+            max: 5,
+          },
+        },
+
+        shape: {
+          type: "circle",
+        },
+
+        move: {
+          enable: true,
+          speed: 0.6,
+          direction: "top",
+          random: true,
+          straight: false,
+          outModes: {
+            default: "out",
+          },
+        },
+      },
+
+      detectRetina: true,
+    },
+  });
+}
+
+initParticles();
+
+// =========================
+// AOS
+// =========================
+AOS.init({
+  duration: 900,
+  once: true,
+});
+
+// =========================
+// 1つ目のSwiper
+// =========================
+
+// スライド下の名前を更新する関数
+const catNames = [
+  "なおなお",
+  "ちゃこくん",
+  "はなまる",
+  "ましゅ",
+];
+
+function updateCatName(index) {
+  const counter = document.getElementById("slide-counter");
+
+  if (!counter) return;
+
+  counter.textContent = `${catNames[index]} を表示しています`;
+}
+
+const swiperFirst = new Swiper(".swiper-first", {
   loop: true,
+
   pagination: {
-    el: '.swiper-first .swiper-pagination',
+    el: ".swiper-first .swiper-pagination",
     clickable: true,
   },
+
   navigation: {
-    nextEl: '.swiper-first .swiper-button-next',
-    prevEl: '.swiper-first .swiper-button-prev',
+    nextEl: ".swiper-first .swiper-button-next",
+    prevEl: ".swiper-first .swiper-button-prev",
   },
+
   on: {
-    slideChange: function () {
-      const counterEl = document.getElementById('slide-counter');
-      if (counterEl) {
-        const currentNumber = this.realIndex + 1;
-        counterEl.innerHTML = '';
-        // 後からここの文言も自由に変更可能です
-        const textNode = document.createTextNode(`特徴その ${currentNumber} を表示しています。`);
-        counterEl.appendChild(textNode);
-      }
+    init() {
+      updateCatName(this.realIndex);
+    },
+
+    slideChange() {
+      updateCatName(this.realIndex);
     },
   },
 });
 
-// ===================================================
-// 2. 2つ目のスライダー（フォトギャラリー）
-// ===================================================
-const swiperSecond = new Swiper('.swiper-second', {
-  direction: 'horizontal',
+// =========================
+// 2つ目のSwiper
+// =========================
+const swiperSecond = new Swiper(".swiper-second", {
   loop: true,
+
   autoplay: {
-    delay: 4500, // スライドが切り替わる速度（4.5秒）
+    delay: 4000,
     disableOnInteraction: false,
   },
+
   pagination: {
-    el: '.swiper-second .swiper-pagination',
+    el: ".swiper-second .swiper-pagination",
     clickable: true,
   },
+
   navigation: {
-    nextEl: '.swiper-second .swiper-button-next',
-    prevEl: '.swiper-second .swiper-button-prev',
+    nextEl: ".swiper-second .swiper-button-next",
+    prevEl: ".swiper-second .swiper-button-prev",
   },
 });
 
-// ===================================================
-// 3. フォームの入力バリデーション（JustValidate）
-// ===================================================
-const validator = new JustValidate('#basic_form', {
-  errorFieldCssClass: 'is-invalid',
+// =========================
+// フォームバリデーション
+// =========================
+const validator = new JustValidate("#basic_form", {
+  errorFieldCssClass: "is-invalid",
+
   errorLabelStyle: {
-    color: '#d9534f', // 落ち着いたくすみ赤に変更（AI感削減）
-    fontSize: '13px',
-    marginTop: '5px'
-  }
+    color: "#d9534f",
+    fontSize: "13px",
+    marginTop: "5px",
+  },
 });
 
-// ルールの設定（ここを書き換えるだけで必須条件や文字数のルールを後から編集可能）
 validator
-  .addField('#basic_name', [
-    { rule: 'required', errorMessage: 'お名前を入力してください。' },
-    { rule: 'minLength', value: 2, errorMessage: 'お名前は2文字以上で入力してください。' },
+  .addField("#basic_name", [
+    {
+      rule: "required",
+      errorMessage: "お名前を入力してください。",
+    },
+    {
+      rule: "minLength",
+      value: 2,
+      errorMessage: "2文字以上入力してください。",
+    },
   ])
-  .addField('#basic_email', [
-    { rule: 'required', errorMessage: 'メールアドレスは必須です。' },
-    { rule: 'email', errorMessage: 'メールアドレスの形式が正しくありません。' },
+
+  .addField("#basic_email", [
+    {
+      rule: "required",
+      errorMessage: "メールアドレスを入力してください。",
+    },
+    {
+      rule: "email",
+      errorMessage: "メールアドレスの形式が正しくありません。",
+    },
   ])
-  .addField('#basic_password', [
-    { rule: 'required', errorMessage: 'パスワードを入力してください。' },
-    { rule: 'password', errorMessage: 'セキュリティのため8文字以上（数字を1文字以上含む）にしてください。' },
+
+  .addField("#basic_password", [
+    {
+      rule: "required",
+      errorMessage: "パスワードを入力してください。",
+    },
+    {
+      rule: "password",
+      errorMessage: "8文字以上・数字を含めてください。",
+    },
   ])
-  .addField('#basic_age', [
-    { rule: 'required', errorMessage: '猫歴を入力してください。' },
-    { rule: 'number', errorMessage: '半角数字で入力してください。' },
-    { rule: 'minNumber', value: 0, errorMessage: '0以上の数値を入力してください。' },
+
+  .addField("#basic_age", [
+    {
+      rule: "required",
+      errorMessage: "猫歴を入力してください。",
+    },
+    {
+      rule: "number",
+      errorMessage: "数字を入力してください。",
+    },
+    {
+      rule: "minNumber",
+      value: 0,
+      errorMessage: "0以上を入力してください。",
+    },
   ])
-  .addField('#basic_address', [
-    { rule: 'required', errorMessage: 'お住まいの地域を入力してください。' },
+
+  .addField("#basic_address", [
+    {
+      rule: "required",
+      errorMessage: "地域を入力してください。",
+    },
   ])
+
   .onSuccess((event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    alert('温かいメッセージありがとうございました！送信に成功しました。');
-    console.log('送信された名前:', formData.get('name'));
-  });
 
-// ===================================================
-// 4. AOS（スクロールでフワッと出すアニメーション）の初期設定
-// ===================================================
-AOS.init({
-  duration: 900, // フワッと表示される速度（0.9秒かけてなめらかに）
-  once: true,    // 1回表示されたら、スクロールを戻しても再アニメーションさせない（落ち着いた挙動）
-});
+    const formData = new FormData(event.target);
+
+    alert("送信ありがとうございました！");
+
+    console.log(formData.get("name"));
+  });

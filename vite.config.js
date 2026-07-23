@@ -1,11 +1,14 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
-  // 💡 ここを './' から '/homepage/' に変更します（あなたのGitHubのリポジトリ名）
-  base: '/homepage/', 
-  
   build: {
-    outDir: 'docs',
-    emptyOutDir: true,
+    outDir: "docs",
+    rollupOptions: {
+      input: {
+        main: resolve(import.meta.dirname, "index.html"),
+        app: resolve(import.meta.dirname, "app.html"),
+      },
+    },
   },
 });

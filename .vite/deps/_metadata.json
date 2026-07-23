@@ -1,0 +1,76 @@
+{
+  "hash": "9f8b4ee7",
+  "configHash": "3dda4ccd",
+  "lockfileHash": "48a47aa4",
+  "browserHash": "14ee10ba",
+  "optimized": {
+    "@tsparticles/engine": {
+      "src": "../../node_modules/@tsparticles/engine/browser/index.js",
+      "file": "@tsparticles_engine.js",
+      "fileHash": "9eba76d5",
+      "needsInterop": false
+    },
+    "@tsparticles/slim": {
+      "src": "../../node_modules/@tsparticles/slim/browser/index.js",
+      "file": "@tsparticles_slim.js",
+      "fileHash": "2e0c823b",
+      "needsInterop": false
+    },
+    "aos": {
+      "src": "../../node_modules/aos/dist/aos.js",
+      "file": "aos.js",
+      "fileHash": "f89abb61",
+      "needsInterop": true
+    },
+    "just-validate": {
+      "src": "../../node_modules/just-validate/dist/just-validate.es.js",
+      "file": "just-validate.js",
+      "fileHash": "6cd9ac71",
+      "needsInterop": false
+    },
+    "swiper/bundle": {
+      "src": "../../node_modules/swiper/swiper-bundle.mjs",
+      "file": "swiper_bundle.js",
+      "fileHash": "dd8bd4e2",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "BlendPluginInstance-DM8IrO5D": {
+      "file": "BlendPluginInstance-DM8IrO5D.js",
+      "isDynamicEntry": true
+    },
+    "Container-D0irTMvK": {
+      "file": "Container-D0irTMvK.js",
+      "isDynamicEntry": true
+    },
+    "ImagePreloaderInstance-Bkwxayr5": {
+      "file": "ImagePreloaderInstance-Bkwxayr5.js",
+      "isDynamicEntry": true
+    },
+    "InteractivityConstants-D6y31Zim": {
+      "file": "InteractivityConstants-D6y31Zim.js",
+      "isDynamicEntry": false
+    },
+    "InteractivityPluginInstance-CrzybTte": {
+      "file": "InteractivityPluginInstance-CrzybTte.js",
+      "isDynamicEntry": true
+    },
+    "LinkInstance-DMA2YZ6X": {
+      "file": "LinkInstance-DMA2YZ6X.js",
+      "isDynamicEntry": true
+    },
+    "MovePluginInstance-BPTUBOUk": {
+      "file": "MovePluginInstance-BPTUBOUk.js",
+      "isDynamicEntry": true
+    },
+    "OverlapPluginInstance-DpjOq1uw": {
+      "file": "OverlapPluginInstance-DpjOq1uw.js",
+      "isDynamicEntry": true
+    },
+    "browser-D1s4r1_w": {
+      "file": "browser-D1s4r1_w.js",
+      "isDynamicEntry": false
+    }
+  }
+}

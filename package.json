@@ -12,9 +12,12 @@
     "vite": "^8.0.12"
   },
   "dependencies": {
+    "@tsparticles/engine": "^4.3.2",
+    "@tsparticles/slim": "^4.3.2",
     "aos": "^2.3.4",
     "canvas-confetti": "^1.9.4",
     "just-validate": "^4.3.0",
-    "swiper": "^12.2.0"
+    "swiper": "^12.2.0",
+    "tsparticles": "^4.3.2"
   }
 }

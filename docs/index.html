@@ -1,105 +1,195 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Beloved Cat - 愛猫の紹介サイト</title>
-    <script type="module" crossorigin src="/homepage/assets/index-CC9ufEqj.js"></script>
-    <link rel="stylesheet" crossorigin href="/homepage/assets/index-BAYLwjQY.css">
-  </head>
-  <body>
 
-    <header class="site-header" data-aos="fade-in">
-      <p class="sub-title">My Companion</p>
-      <h1 class="main-title">愛猫のいる暮らし</h1>
-      <p class="lead-text">我が家の大切な家族を紹介します。日々の可愛い瞬間や、お気に入りの居場所をまとめました。</p>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Beloved Cat - 愛猫の紹介サイト</title>
+  <script type="module" crossorigin src="/assets/LogUtils-C2G5o1gm.js"></script>
+  <script type="module" crossorigin src="/assets/browser-qk33JoxS.js"></script>
+  <script type="module" crossorigin src="/assets/OptionsUtils-CbmsA6vQ.js"></script>
+  <script type="module" crossorigin src="/assets/main-hIF6Ar-T.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-IztYGC7q.css">
+</head>
 
-    <section class="section-container">
-      <div class="swiper swiper-first" data-aos="fade-up">
-        <img src="/homepage/assets/Nao_1-FPVzlae1.jpg" alt="日当たりのいい特等席でお昼寝中">
-        <div class="slide-title">かわいいお顔</div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">🐱 甘えん坊で、撫でられるのが大好き</div>
-          <div class="swiper-slide">🍖 ご飯の足音が聞こえると飛んできます</div>
-          <div class="swiper-slide">📦 なぜかおもちゃより段ボールが一番好き</div>
+<body>
+
+  <!-- 背景 -->
+  <div id="tsparticles"></div>
+
+  <!-- Header -->
+  <header class="site-header" data-aos="fade-down">
+
+    <p class="sub-title">My Companion</p>
+
+    <h1 class="main-title">
+      愛猫のいる暮らし
+    </h1>
+
+    <p class="lead-text">
+      我が家の大切な家族を紹介します。<br>
+      日々の可愛い瞬間やお気に入りの居場所をまとめました。
+    </p>
+
+  </header>
+
+
+  <!-- 写真 -->
+  <section class="section-container">
+
+    <h2 class="section-title">
+      愛猫ギャラリー
+    </h2>
+  
+    <div class="swiper swiper-first">
+  
+      <div class="swiper-wrapper">
+  
+        <div class="swiper-slide" data-cat-name="Nao">
+          <img src="/Nao_1.jpg" alt="Nao">
+          <div class="slide-title">三毛猫なおなお</div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+  
+        <div class="swiper-slide" data-cat-name="Tyako">
+          <img src="/tyako_2.jpg" alt="Tyako" class="cat-tyako">
+          <div class="slide-title">チャトラのちゃこ</div>
+        </div>
+  
+        <div class="swiper-slide" data-cat-name="Hana">
+          <img src="/Hana_1.jpg" alt="Hana">
+          <div class="slide-title">ぶち猫はなまる</div>
+        </div>
+
+        <div class="swiper-slide" data-cat-name="Sora">
+          <img src="/masyu_1.jpg" alt="masyu">
+          <div class="slide-title">白猫マシュ</div>
+        </div>
+  
       </div>
-      
-      <div id="slide-counter" data-aos="fade-up" data-aos-delay="100">
-        スライド1を表示しています。
+  
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+  
+    </div>
+  
+    <div id="slide-counter">
+      Nao を表示しています
+    </div>
+  
+  </section>
+
+
+  <!-- 特徴 -->
+
+  <section class="section-container">
+
+    <h2 class="section-title">
+      Naoちゃんの特徴
+    </h2>
+
+    <div class="swiper swiper-second">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          🐱 甘えん坊で撫でられるのが大好き
+        </div>
+
+        <div class="swiper-slide">
+          🍖 ご飯になると一目散
+        </div>
+
+        <div class="swiper-slide">
+          📦 段ボールが一番好き
+        </div>
+
       </div>
-    </section>
 
-    <section class="section-container">
-      <h2 class="section-title" data-aos="fade-up">お気に入りの瞬間</h2>
-      
-      <div class="swiper swiper-second" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/id/1025/600/300" alt="お気に入りの場所でウトウト">
-            <div class="slide-title">日当たりのいい特等席でお昼寝中</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/id/237/600/300" alt="おもちゃを見つめる目">
-            <div class="slide-title">遊んでほしくてじっと見つめてくる瞬間</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="https://picsum.photos/id/1062/600/300" alt="のびのびリラックス">
-            <div class="slide-title">お腹を見せてゴロゴロ、リラックスモード</div>
-          </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+
+      <div class="swiper-button-next"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Form -->
+
+  <section class="section-container">
+
+    <h2 class="section-title">
+      猫友コミュニティ
+    </h2>
+
+    <p class="section-desc">
+      メッセージをお待ちしています。
+    </p>
+
+    <form id="basic_form">
+
+      <div class="form-group">
+
+        <label for="basic_name">お名前</label>
+
+        <div class="input-container">
+          <input id="basic_name" type="text">
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+
       </div>
-    </section>
 
-    <section class="section-container">
-      <h2 class="section-title" data-aos="fade-up">猫友コミュニティ・メッセージ</h2>
-      <p class="section-desc" data-aos="fade-up">猫好きさんからのメッセージや、うちの猫への感想をお待ちしています！</p>
+      <div class="form-group">
 
-      <form id="basic_form" novalidate data-aos="fade-up" data-aos-delay="100">
-        <div class="form-group">
-          <label for="basic_name"><span>お名前</span></label>
-          <div class="input-container">
-            <input id="basic_name" type="text" name="name" placeholder="お名前をフルネームで入力してください" />
-          </div>
+        <label for="basic_email">メール</label>
+
+        <div class="input-container">
+          <input id="basic_email" type="text">
         </div>
 
-        <div class="form-group">
-          <label for="basic_email"><span>メールアドレス</span></label>
-          <div class="input-container">
-            <input id="basic_email" type="text" name="email" placeholder="example@domain.com" />
-          </div>
+      </div>
+
+      <div class="form-group">
+
+        <label for="basic_password">パスワード</label>
+
+        <div class="input-container">
+          <input id="basic_password" type="password">
         </div>
 
-        <div class="form-group">
-          <label for="basic_password"><span>パスワード設定</span></label>
-          <div class="input-container">
-            <input id="basic_password" type="password" name="password" placeholder="8文字以上（英数字を含む）" />
-          </div>
+      </div>
+
+      <div class="form-group">
+
+        <label for="basic_age">猫歴</label>
+
+        <div class="input-container">
+          <input id="basic_age" type="number">
         </div>
 
-        <div class="form-group">
-          <label for="basic_age"><span>あなたの猫歴（年）</span></label>
-          <div class="input-container">
-            <input id="basic_age" type="number" name="age" placeholder="猫との暮らしの長さを教えてください（18〜150）" />
-          </div>
+      </div>
+
+      <div class="form-group">
+
+        <label for="basic_address">お住まい</label>
+
+        <div class="input-container">
+          <input id="basic_address" type="text">
         </div>
 
-        <div class="form-group">
-          <label for="basic_address"><span>お住まいの地域</span></label>
-          <div class="input-container">
-            <input id="basic_address" type="text" name="address" placeholder="都道府県名など（例: 京都府）" />
-          </div>
-        </div>
+      </div>
 
-        <button type="submit">メッセージを送信する</button>
-      </form>
-    </section>
-  </body>
+      <button type="submit">
+        メッセージを送信する
+      </button>
+
+    </form>
+
+  </section>
+
+
+</body>
+
 </html>
