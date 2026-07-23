@@ -1,20 +1,20 @@
 /* ===================================================
-   ベースデザイン（優しいアースカラーとフォント）
+   ベースデザイン
    =================================================== */
    body {
     margin: 0;
     padding: 60px 20px;
-    /* 💡 bodyの背景色を透明にして、一番後ろの「html」タグに背景色を設定することで、tsparticlesを一番背面に表示させます */
+    
     background-color: transparent; 
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
-    color: #4a4238; /* 柔らかいチャコール */
+    color: #4a4238; 
     line-height: 1.6;
     position: relative;
     z-index: 1;
   }
   
   html {
-    /* 💡 本体の背景色はこちらに設定します */
+  
     background-color: #fcfaf6; 
   }
   
@@ -105,17 +105,16 @@
   .swiper-second img {
     width: 100%;
     height: 100%;
-    /* 💡 画像全体がきれいに枠に収まるように「contain」に変更 */
+    
     object-fit: contain; 
-    background-color: #faf9f6; /* 画像の隙間を埋める優しい背景色 */
+    background-color: #faf9f6;
   }
 
-  /* tyakoちゃん専用の個別サイズ指定 */
+
 .swiper-first img.cat-tyako {
-  width: 100%;       /* 横幅を枠の80%に縮小 */
-  height: 100%;      /* 高さを枠の80%に縮小 */
-  object-fit: contain; /* 画像を切らずに綺麗に収める */
-  margin: auto;     /* 枠の中央に配置 */
+  width: 100%;       
+  object-fit: contain; 
+  margin: auto;     
 }
 
   
@@ -186,14 +185,14 @@
     border-radius: 6px;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #e1dbd2; /* 優しいグレーベージュ */
+    border: 1px solid #e1dbd2; 
     background-color: #faf9f6;
     font-size: 14px;
     color: #4a4238;
     transition: all 0.3s ease;
   }
   
-  /* 入力欄をクリック（フォーカス）したときの上品な光り方 */
+  
   #basic_form input:focus {
     outline: none;
     border-color: #b58d5c;
@@ -207,7 +206,7 @@
     background-color: #fff9f9;
   }
   
-  /* 送信ボタン（落ち着いたアースブラウン） */
+  
   #basic_form button {
     display: block;
     border: 0;
@@ -224,7 +223,7 @@
   }
   
   #basic_form button:hover {
-    background-color: #443c31; /* ホバーで少し深く */
+    background-color: #443c31; 
   }
   
   @media (max-width: 600px) {
